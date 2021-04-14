@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="app.js" as="script" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="header">
+        <i class="fas fa-bars"></i>
+        <h5 class="now__playing" id="now__playing">Now Playing</h5>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="image__container">
+        <img
+          id="song__cover"
+          className="audio__image"
+          src="./images/Motion Sickness.jpeg"
+          alt="album cover"
+        />
+      </div>
+      <audio src="music/Motion Sickness.mp3" id="song"></audio>
+      <div class="details">
+        <h2 id="artist__title">Pheobe Bridgers</h2>
+        <h4 id="song__title">Motion Sickness</h4>
+      </div>
+
+      <div class="progress__container" id="progress__container">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="time__stamp">
+        <span class="song__duration" id="song__duration">0:00</span>
+        <span class="song__time" id="song__time">0:00</span>
+      </div>
+
+      <div class="control__bar">
+        <i id="random" class="fas fa-random"></i>
+        <i id="prev" class="fas fa-backward"></i>
+        <div id="playBtn" class="play__circle">
+          <i class="fas fa-play"></i>
+        </div>
+        <i id="next" class="fas fa-forward"></i>
+        <i class="fas fa-retweet"></i>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
